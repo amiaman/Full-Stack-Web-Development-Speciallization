@@ -1,0 +1,14 @@
+<form>
+    Please enter your name. <br>
+    <input type="text" name="form1"> <br> <br>
+    Please enter your Email. <br>
+    <input type="text" name="form1"> <br> <br>
+
+    Please indicate your intelligence level. <br>
+    <input type="radio" name="iq" value="India" checked>India <br>
+    <input type="radio" name="iq" value="Pakistan" >Pakistan <br>
+    <input type="radio" name="iq" value="USA">USA <br>
+    <input type="radio" name="iq" value="Chaina">Chaina <br>
+    <input type="radio" name="iq" value="Sri Lanka" checked>Sri Lanka <br>
+    <input type="radio" name="iq" value="UK">UK <br> <br>
+</form>
