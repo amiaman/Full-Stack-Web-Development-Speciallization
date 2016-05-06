@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <body onload="login()">
+        <script>
+		   function login(){
+		     if(information() == 1)
+			   document.write("Hiii! Welcome to my page ");
+		   
+		   	   
+		   }
+            
+		  function information(){
+		     var user, password, enter;
+		     user = prompt('what is your name?');
+			 password = prompt('enter your password');
+		     if(user == "aman" && password == "1234")
+			     enter = 1;
+			 return enter;
+		  }
+        </script>
+    </body>
+</html>
