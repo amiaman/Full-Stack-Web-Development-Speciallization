@@ -11,5 +11,5 @@ function mathsSolve(a, b){
 }
 
 mathsSolve(4, 2);
-mathsSolve(30, 5);
+mathsSolve(30, 15);
 mathsSolve(18,9);
