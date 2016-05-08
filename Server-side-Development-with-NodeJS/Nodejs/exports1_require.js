@@ -8,7 +8,7 @@ function solveRect(l,b) {
                + l + ",  and b = " + b);
     }
     else {
-	console.log("The area of a rectangle of dimensions length = "
+	console.log("The area of a rectangle of dimensions  length = "
                + l + " and breadth = " + b + " is " + rect.area(l,b));
 	console.log("The perimeter of a rectangle of dimensions length = "
                + l + " and breadth = " + b + " is " + rect.perimeter(l,b));
