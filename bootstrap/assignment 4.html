@@ -1,0 +1,33 @@
+//  Login Botton
+<ul class="nav navbar-nav navbar-right">
+        <li><a id="loginButton">
+					
+            <span class="glyphicon glyphicon-log-in"></span> Login</a>
+        
+        </li>
+</ul>
+
+
+//  Reserve Button
+<button type="button" class="btn btn-warning btn-block" 
+					id="reserveTable">Reserve Table</button>
+
+
+// Show the Modal login
+	<script>
+            $(document).ready(function(){
+                $("#loginButton").click(function(){
+                    $("#loginModal").modal();
+                   });
+				});
+    </script>
+	
+	
+	// Show the Modal Reserve Table
+	<script>
+            $(document).ready(function(){
+                $("#reserveTable").click(function(){
+                    $("#reserveform").modal();
+                   });
+				});
+    </script>
