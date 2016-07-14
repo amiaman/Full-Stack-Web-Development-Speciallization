@@ -1,0 +1,52 @@
+/*.body{
+margin: 10px;
+padding:10px;
+}
+*/
+
+
+
+
+.Table, th, td{
+  border:1px solid black;
+  text-align: center;
+  
+}
+.Table{
+  width: 100%;
+  height: 100%;
+  /*position: right;*/
+
+}
+
+
+.left{
+   float: left;
+   /*position: relative;
+    top: 0;*/
+   width: 49%;
+   height:130px;
+   border: 3px solid #73AD21;
+
+}
+
+.right{
+    float: right;
+    /*position: absolute;
+    top: 0;
+    right: 0;
+    left: 510px;*/
+	text-align: center;
+	height: 130px;
+	width: 50%;
+    border: 3px solid #73AD21;
+
+
+}
+.bottom{
+   border: 3px solid #73AD21;
+   text-align: center;
+
+}
+
+
