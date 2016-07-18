@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+     <head>
+	     <title>Airport Form</title>
+		 <link rel="stylesheet" type="text/css" href="main.css">
+		 <script>  
+			function validateform(){  
+				var firstname=document.myform.firstname.value;  
+				var lastname=document.myform.lastname.value; 
+				var gender=document.myform.gender.value;
+				
+				if(firstname.match(/\s/g) || lastname.match(/\s/g)){
+                    alert("first letter can't be space");
+                    return false;
+                }
+								
+				if (firstname==null || firstname=="" || firstname==""){  
+					alert("First Name can't be blank");  
+					return false;  
+				}
+				
+				if(lastname==null || lastname==""){  
+					alert("Last Name can't be blank");  
+					return false;  
+				}
+					
+				if(gender=="select"){
+					alert("Please Select your Gender");
+					return false;
+				}
+				var airlinecount = 0;
+				for (i = 0; i< document.myform.airline.length; i++){
+					if(document.myform.airline[i].selected)
+						airlinecount += 1;						
+				}
+				if(airlinecount < 2){
+					alert("Please Select 2 or more Airline");
+					return false;
+				}
+				var stuffcount = 0;
+				for (i = 0; i< document.myform.stuff.length; i++){
+					if(document.myform.stuff[i].checked){
+						stuffcount += 1;
+					}
+				}
+				if(stuffcount < 2){
+					alert("Please Select 2 or more Stuff");
+					return false;
+				}
+				var photoid=document.myform.photoid.value;
+				var ext=photoid.substring(photoid.lastIndexOf('.')+1);
+				if(ext == "gif" || ext == "GIF" || ext == "jpg" || ext == "JPG" || ext == "jpeg" || ext == "JPEG"){
+					return true;
+				}
+				else{
+					alert(".gif and .jpeg file only ")
+					return false;
+				}
+			}  
+		</script>  
+	 </head>
+	 <body>
+	     <form name="myform" method="post" onsubmit="return validateform()">
+		     <table>
+			     <tr>
+                     <td>First Name:</td>
+					 <td><input type="text" name="firstname" placeholder="First Name"></td>
+                     <td> </td>
+                 </tr>
+                 <tr>
+                     <td>Last Name:</td>
+				     <td><input type="text" name="lastname" placeholder="Last Name"></td>
+                     <td></td>
+                 </tr>
+				  <tr>
+                     <td>Gender:</td>
+					 <td>
+					     <select name="gender">
+						     <option value="select" selected>Select</option>
+						     <option value="male">Male</option>
+							 <option value="female">Female</option>
+							 <option value="other">Other</option>						     
+						 </select>
+					 </td>
+                     <td> </td>
+                 </tr>
+                 <tr>
+                     <td>Flight Type:</td>
+					 <td>
+					     <input type="radio" name="flighttype" value="domestic" checked>Domestic
+						 <input type="radio" name="flighttype" value="international">International
+					 </td>
+                     <td> </td>
+                 </tr>
+				  <tr>
+                     <td>Select your Airline:</td>
+					 <td>
+					     <select name="airline" size="4" multiple >
+						     <option value="airindia">Air India</option>
+							 <option value="airasia">Air Asia</option>
+							 <option value="goair">Go Air</option>
+							 <option value="indigo">IndiGo</option>
+							 <option value="jetairways">Jet Airways</option>
+							 <option value="spicejet">Spice Jet</option>
+						 </select>
+					 </td>
+                     <td>
+					 </td>
+                 </tr>
+                 <tr>
+                     <td>Personal Stuff:</td>
+					 <td> 
+					     	<input type="checkbox" name="stuff" value="wallet">Wallet
+							<input type="checkbox" name="stuff" value="goggle">Goggle
+							<input type="checkbox" name="stuff" value="bags">Bags
+							<input type="checkbox" name="stuff" value="other">Other
+					 </td>
+                     <td> </td>
+                 </tr>
+				 <tr>
+				     <td>Upload Your ID:</td>
+					 <td><input type="file" name="photoid"></td>
+					 <td></td>
+				 </tr>
+				 <tr>
+				     <td></td>
+					 <td><input type="submit" value="Submit"></td>
+					 <td></td>
+				 </tr>
+		     
+		     </table>
+	     </form>
+	 </body>
+</html>
